@@ -24,6 +24,11 @@ public class PessoaFisica extends Cliente {
     }
 
     @Override
+    boolean autenticar(String key) {
+        return key.equals(this.cpf);
+    }
+
+    @Override
     public boolean equals(Object obj) {
         PessoaFisica pessoa = (PessoaFisica) obj;
         return cpf.equals(pessoa.cpf);

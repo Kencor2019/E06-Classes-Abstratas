@@ -26,6 +26,11 @@ public class PessoaJuridica extends Cliente {
     }
 
     @Override
+    public boolean autenticar(String key){
+        return key == cnpj;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         PessoaJuridica pessoa = (PessoaJuridica) obj;
         return cnpj.equals(pessoa.cnpj);

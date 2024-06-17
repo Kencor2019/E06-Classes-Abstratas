@@ -1,10 +1,9 @@
 import java.util.Date;
-public class Cliente {
+public abstract class Cliente {
 
     protected String nome;
     protected String endereco;
     protected Date data;
-    int y;
 
     public Cliente(String nome, String endereco, Date data) {
         this.nome = nome;
@@ -13,6 +12,8 @@ public class Cliente {
     }
 
     public void imprimir(){System.out.println("cliente inválido");}
+
+    abstract boolean autenticar(String key);
 
     public String getNome() {return nome;}
     public void setNome(String nome) {this.nome = nome;}
